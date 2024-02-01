@@ -10,5 +10,5 @@ class Autor(models.Model):
 class Libro(models.Model):
     title = models.CharField(max_length=256, null=True)
     autor = models.ForeignKey(Autor, on_delete=models.CASCADE, null=True)
-    fecha_publicacion = models.DateField(auto_now_add=True, null=True)
+    fecha_publicacion = models.DateField(null=True)
     resumen = models.TextField(null=True, blank=True)
